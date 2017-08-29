@@ -24,7 +24,7 @@ public class EmployeeManagementServiceTest {
 	{
 		
 		Employee testEmployee1 = new Employee(10, "Makr", "Zuckenber", 100);
-		Employee testEmployee2 = new Employee(11, "Makr", "Zuckenber", 100);
+		Employee testEmployee2 = new Employee(11, "Wiktor", "Orban", 10000);
 		
 		employeeService.addEmployee(testEmployee1);
 		employeeService.addEmployee(testEmployee2);
@@ -36,7 +36,7 @@ public class EmployeeManagementServiceTest {
 	@Test(expected = RecordNotFoundException.class)
 	public void testRemoveEmployee() throws RecordNotFoundException
 	{		
-		Employee removeEmployee = new Employee(998989, "Makr", "Zuckenber", 100);		
+		Employee removeEmployee = new Employee(998989, "Teo", "Teofilski", 100);		
 		employeeService.removeEmployee(removeEmployee);	 
 	}
 	
@@ -44,7 +44,7 @@ public class EmployeeManagementServiceTest {
 	public void testFindEmployeeById()
 	{
 		int employeeId = 12;
-		Employee testEmployee = new Employee(employeeId, "Makr", "Zuckenber", 100);
+		Employee testEmployee = new Employee(employeeId, "Zurma", "Stanisławski", 100);
 		
 		employeeService.addEmployee(testEmployee);
 		
@@ -65,7 +65,4 @@ public class EmployeeManagementServiceTest {
 	{
  	    Employee foundEmployee = employeeService.findEmployeeById(999999999);
 	}
-	
-	
-
 }
